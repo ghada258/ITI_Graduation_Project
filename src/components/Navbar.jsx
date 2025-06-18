@@ -46,7 +46,7 @@ const Navbar = () => {
     <>
       <AppBar position="static" sx={{backgroundColor:'white',fontFamily:'var(--main_font)' }} >
       <Container maxWidth="xl" >
-        <Toolbar disableGutters  >
+        <Toolbar disableGutters sx={{paddingX:5}}  >
       
           <Typography
             variant="h6"
@@ -129,8 +129,8 @@ const Navbar = () => {
           </Box>
 
            { !LoggedIn &&  <Box sx={{display:'flex' ,gap:1}}>
-            <Button variant="outlined" sx={{color:'var(--primary-color)', borderColor:'var(--primary-color)'}}>Sign In</Button>
-            <Button variant="contained" sx={{backgroundColor:'var(--primary-color)'}}>Register</Button>
+            <Button variant="outlined" sx={{color:'var(--primary-color)',paddingX:3, borderColor:'var(--primary-color)' ,borderRadius:'16px'}}>Sign In</Button>
+            <Button variant="contained" sx={{backgroundColor:'var(--primary-color)',paddingX:3,borderRadius:'16px'}}>Register</Button>
             
           </Box>}
 

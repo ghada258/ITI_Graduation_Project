@@ -54,7 +54,7 @@ const Footer = () => {
                 
                 <Box sx={{display:'flex' ,gap:2,justifyContent:'center',alignItems:'center'}}>
                 <EmailIcon baseClassName="fas"  sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
-                <Typography variant='body1' sx={{color:'white'}} >ReactiveShoes@gmail.com</Typography>
+                <Typography variant='body1' sx={{color:'white'}} >ElderTrust@gmail.com</Typography>
                 </Box>
 
                 <Box sx={{ display:'flex' ,gap:2,justifyContent:'center',alignItems:'center'}}>

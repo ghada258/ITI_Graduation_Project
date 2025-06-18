@@ -15,9 +15,9 @@ const Footer = () => {
            <Box component="img" src="images/White_logo.svg" alt="logo"   sx={{ width: 150, height: 'auto' }} />
             <Typography width={450} sx={{color:'var(--footer-text)'}}>Providing compassionate, high-quality elderly care services with easy online booking — ensuring comfort, dignity, and peace of mind for every family.</Typography>
             <Box sx={{display:'flex',alignItems:'center' ,gap:1}}>
-                 <Box component="img" src="images/facebook.svg" alt="logo"  sx={{ cursor:'pointer' , paddingX:2 ,paddingY:1,width: 13,bgcolor:'white', height: 'auto',borderRadius:1 }} />
-                  <TwitterIcon baseClassName="fas"  sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
-                 <InstagramIcon baseClassName="fas" sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
+                 <Box component="img" src="images/facebook.svg" alt="logo"   sx={{ cursor:'pointer'  ,paddingY:1,width: 35,bgcolor:'white', height: 35,borderRadius:1 }} />
+                  <TwitterIcon baseClassName="fas"  fontSize="large" sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
+                 <InstagramIcon baseClassName="fas" fontSize="large" sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
             </Box>
             
           </Box>  
@@ -48,17 +48,17 @@ const Footer = () => {
             <Typography variant='h5' sx={{color:'white',fontWeight:600}}>Contact Us</Typography>
             <Box sx={{display:'flex' ,flexDirection:'column',alignItems:'flex-start'  ,gap:1}}>
                 <Box sx={{display:'flex' ,gap:2,justifyContent:'center',alignItems:'center'}}>
-                <WifiCalling3Icon baseClassName="fas"  sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
+                <WifiCalling3Icon baseClassName="fas" fontSize="large"  sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
                 <Typography variant='body1' sx={{color:'white'}} >(202) 552-0126</Typography>
                 </Box>
                 
                 <Box sx={{display:'flex' ,gap:2,justifyContent:'center',alignItems:'center'}}>
-                <EmailIcon baseClassName="fas"  sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
+                <EmailIcon baseClassName="fas" fontSize="large"  sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
                 <Typography variant='body1' sx={{color:'white'}} >ElderTrust@gmail.com</Typography>
                 </Box>
 
                 <Box sx={{ display:'flex' ,gap:2,justifyContent:'center',alignItems:'center'}}>
-                <LocationPinIcon baseClassName="fas"  sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
+                <LocationPinIcon baseClassName="fas" fontSize="large" sx={{color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
                 <Typography variant='body1' sx={{color:'white'}} > Parker Rd. Allentown,Cairo 31134</Typography>
              </Box>
 

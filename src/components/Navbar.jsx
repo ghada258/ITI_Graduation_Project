@@ -11,14 +11,20 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import { useState } from 'react';
+
 
 const pages = ['Home', 'Assistants', 'Contact Us'];
 const settings = ['Profile', 'Logout'];
 
 const Navbar = () => {
-     const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [LoggedIn , setLoggedIn] = useState(false);
+
+  const handleLoggedIn = ()=>{
+    setLoggedIn(true);
+  }
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -34,13 +40,14 @@ const Navbar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  
 
   return (
     <>
-    <AppBar  position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          
+      <AppBar position="static" sx={{backgroundColor:'white',fontFamily:'var(--main_font)' }} >
+      <Container maxWidth="xl" >
+        <Toolbar disableGutters  >
+      
           <Typography
             variant="h6"
             noWrap
@@ -49,17 +56,13 @@ const Navbar = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
             }}
           >
-            LOGO
+            <Box component="img" src='images/Green_Logo.svg' sx={{width:150 , Height:'auto'}}/>
+
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -68,7 +71,7 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{color:'var(--primary-color)'}}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -88,12 +91,12 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <Typography sx={{ textAlign: 'center', color:'var(--NavbarGray)'}}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+      
           <Typography
             variant="h5"
             noWrap
@@ -110,23 +113,31 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+           <Box component="img" src='images/Green_Logo.svg' sx={{width:150 , Height:'auto'}}/>
+
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } , justifyContent:'center' }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block',color:'var(--NavbarGray)'}}
               >
                 {page}
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+
+           { !LoggedIn &&  <Box sx={{display:'flex' ,gap:1}}>
+            <Button variant="outlined" sx={{color:'var(--primary-color)', borderColor:'var(--primary-color)'}}>Sign In</Button>
+            <Button variant="contained" sx={{backgroundColor:'var(--primary-color)'}}>Register</Button>
+            
+          </Box>}
+
+       { LoggedIn &&  <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="images/navbar_img.svg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -151,7 +162,7 @@ const Navbar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box>}
         </Toolbar>
       </Container>
     </AppBar>

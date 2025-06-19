@@ -22,18 +22,26 @@ const theme = createTheme({
       main: "#2e7d32",
     },
     background: {
-      default: "#87DEC6",
+      // default: "#87DEC6",
       paper: "#fff",
     },
     text: {
       primary: "#165040",
       secondary: "#4B4848",
+      
+    },
+    neutral: {
+      mainPrimaryGray: "#4B4848", 
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif",
-    // fontFamily:'Poppins'
+    // fontFamily: "Roboto, sans-serif",
+    fontFamily:'Nunito'
   },
+   poppins: {
+      fontFamily: "Poppins",
+    },
+
   custom: {
     sidebarWidth: 240,
     borderRadius: "12px",

@@ -2,11 +2,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 
 import Contact from './pages/Contact'
-
-import SignUp from './pages/signUp'
-
-
-
+import AssistantsSection from './pages/Assistants'
+import ProfileCard from './components/ProfileCard'
 function App() {
  
 
@@ -15,10 +12,9 @@ function App() {
 
       <Navbar/>
 
-      <Contact/>
-
-      
-      <SignUp></SignUp>
+      {/* <Contact/> */}
+     {/* <AssistantsSection/> */}
+    <ProfileCard />
       
     </>
   )

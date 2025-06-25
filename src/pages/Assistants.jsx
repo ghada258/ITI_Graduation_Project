@@ -9,7 +9,8 @@ import {
 import assistantImage from "../assets/images/assistantMain.png";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import SearchIcon from "@mui/icons-material/Search";
-
+import ProfileCard from "../components/ProfileCard";
+import { Pagination } from "@mui/material";
 const AssistantsSection = () => {
   const theme = useTheme();
 
@@ -117,7 +118,7 @@ const AssistantsSection = () => {
             pr: 3,
             py: 0.5,
             width: "100%",
-            maxWidth: 650, 
+            maxWidth: 700, 
             boxShadow: "none",
             border: "1px solid #A5D1C5",
           }}
@@ -133,6 +134,83 @@ const AssistantsSection = () => {
           />
         </Paper>
       </Box>
+      <Box
+  sx={{
+    display: "flex",
+    flexWrap: "nowrap",
+    justifyContent: "center",
+    gap: 1,
+    px: { xs: 2, sm: 5 },
+    pb: 5,
+  }}
+>
+  {[...Array(4)].map((_, index) => (
+    <ProfileCard
+      key={index}
+      role="Elderly Assistant"
+      rating={4.5}
+      description="Helping with daily life activities"
+      location="Cairo, Egypt"
+      imageUrl=""
+    />
+  ))}
+</Box>
+      <Box
+  sx={{
+    display: "flex",
+    flexWrap: "nowrap",
+    justifyContent: "center",
+    gap: 1,
+    px: { xs: 2, sm: 5 },
+    pb: 5,
+  }}
+>
+  {[...Array(4)].map((_, index) => (
+    <ProfileCard
+      key={index}
+      role="Elderly Assistant"
+      rating={4.5}
+      description="Helping with daily life activities"
+      location="Cairo, Egypt"
+      imageUrl=""
+    />
+  ))}
+</Box>
+      <Box
+  sx={{
+    display: "flex",
+    flexWrap: "nowrap",
+    justifyContent: "center",
+    gap: 1,
+    px: { xs: 2, sm: 5 },
+    pb: 5,
+  }}
+>
+  {[...Array(4)].map((_, index) => (
+    <ProfileCard
+      key={index}
+      role="Elderly Assistant"
+      rating={4.5}
+      description="Helping with daily life activities"
+      location="Cairo, Egypt"
+      imageUrl=""
+    />
+  ))}
+</Box>
+
+
+<Box sx={{ display: "flex", justifyContent: "center", mt: 3, pb: 5 }}>
+  <Pagination
+    count={5} 
+    page={1} 
+    onChange={() => {}} 
+    variant="outlined"
+    // color="theme.palette.text.primary"
+    sx={{ color: theme.palette.text.primary }}
+    shape="rounded"
+  />
+</Box>
+
     </>
   );
 };

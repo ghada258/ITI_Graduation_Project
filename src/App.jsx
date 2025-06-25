@@ -1,23 +1,21 @@
-import './App.css'
-import Navbar from './components/Navbar'
+import "./App.css";
+import Navbar from "./components/Navbar";
 
-import Contact from './pages/Contact'
-import AssistantsSection from './pages/Assistants'
-import ProfileCard from './components/ProfileCard'
+import Contact from "./pages/Contact";
+import AssistantsSection from "./pages/Assistants";
+import UserProfile from "./pages/userProfie";
+import UserSession from "./pages/userSessions";
 function App() {
- 
-
   return (
     <>
-
-      <Navbar/>
+      <Navbar />
 
       {/* <Contact/> */}
-     {/* <AssistantsSection/> */}
-    <ProfileCard />
-      
+      {/* <AssistantsSection/> */}
+      <UserProfile />
+     {/* <UserSession/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

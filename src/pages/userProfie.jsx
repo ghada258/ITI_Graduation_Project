@@ -75,7 +75,7 @@ const UserProfile = () => {
           }}
         >
 <Tab
-  icon={<AccessTimeIcon sx={{ mr: 1, fontSize: 18 }} />} // تصغير الأيقونة كمان لو حابة
+  icon={<AccessTimeIcon sx={{ mr: 1, fontSize: 18 }} />} 
   iconPosition="start"
   label="Sessions"
   sx={{
@@ -85,7 +85,7 @@ const UserProfile = () => {
     backgroundColor: tabIndex === 0 ? "#EBF7F4" : "#fff",
     textTransform: "none",
     px: 5,
-    minHeight: 36, // 👈 يقلل الارتفاع
+    minHeight: 36, 
     fontWeight: "bold",
     border: "1px solid #ddd",
     borderBottom: "none",
@@ -104,7 +104,7 @@ const UserProfile = () => {
     backgroundColor: tabIndex === 1 ? "#EBF7F4" : "#fff",
     textTransform: "none",
     px: 3,
-    minHeight: 50, // تقليل الارتفاع لو حابة
+    minHeight: 50, 
     fontWeight: "bold",
     borderBottom: "none",
   }}

@@ -125,7 +125,7 @@ const EditProfileForm = () => {
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="subtitle2" gutterBottom>
+                <Typography variant="subtitle1" gutterBottom fontWeight="bold" >
                   Last Name
                 </Typography>
                 <TextField

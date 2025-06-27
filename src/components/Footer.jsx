@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <>
      <Container maxWidth="100%" disableGutters  sx={{marginTop:1,bgcolor:'var(--primary-color)' ,Height:'50vh',color:'white' ,fontFamily:'var(--main_font)' }}>
-        <Box  sx={{display:'flex',justifyContent:'space-between',gap:3,paddingX:10 ,paddingY:5}} >
+        <Box  sx={{display:'grid',gridTemplateColumns:{xs: 'repeat(1, 1fr)',sm: 'repeat(2, 1fr)',lg: 'repeat(4, 1fr)'},justifyContent:'space-between',gap:5,paddingX:10 ,paddingY:5}} >
           <Box sx={{display:'flex' , flexDirection :'column' ,gap:3}}>
            <Box component="img" src="images/White_logo.svg" alt="logo"   sx={{ width: 150, height: 'auto' }} />
-            <Typography width={450} sx={{color:'var(--footer-text)'}}>Providing compassionate, high-quality elderly care services with easy online booking — ensuring comfort, dignity, and peace of mind for every family.</Typography>
+            <Typography  sx={{color:'var(--footer-text)', width: { xs: '100%', sm: '90%', md: '450px' }}}>Providing compassionate, high-quality elderly care services with easy online booking — ensuring comfort, dignity, and peace of mind for every family.</Typography>
             <Box sx={{display:'flex',alignItems:'center' ,gap:1}}>
                  <Box component="img" src="images/facebook.svg" alt="logo"   sx={{ cursor:'pointer'  ,paddingY:1,width: 35,bgcolor:'white', height: 35,borderRadius:1 }} />
                   <TwitterIcon baseClassName="fas"  fontSize="large" sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'white',padding:1,borderRadius:1}}  />
